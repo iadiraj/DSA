@@ -32,11 +32,11 @@ public class SearchInSortedRotArrII {
         return false;
     }
 //    HELPER FUNCTIONS :
-    public static void main(String[] args) {
-        int[][] nums = {{1, 0, 1, 1, 1}, {1,1,1,1,1,1,1,1,1,13,1,1,1,1,1,1,1,1,1,1,1,1},{2,5,6,0,0,1,2},{2,5,6,0,0,1,2}};
-        int[] target = {0, 13, 0, 3};
-        for(int i = 0; i < nums.length; i++){
-            System.out.println(search(nums[i], target[i]));
-        }
-    }
+//    public static void main(String[] args) {
+//        int[][] nums = {{1, 0, 1, 1, 1}, {1,1,1,1,1,1,1,1,1,13,1,1,1,1,1,1,1,1,1,1,1,1},{2,5,6,0,0,1,2},{2,5,6,0,0,1,2}};
+//        int[] target = {0, 13, 0, 3};
+//        for(int i = 0; i < nums.length; i++){
+//            System.out.println(search(nums[i], target[i]));
+//        }
+//    }
 }
