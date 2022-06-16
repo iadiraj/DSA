@@ -3,6 +3,10 @@ package LC_BINARYSEARCH_PL.DAY3;
 // https://leetcode.com/problems/find-the-distance-value-between-two-arrays/
 
 import java.util.Arrays;
+// CONCEPT :
+// |arr1[i]-arr2[j]| <= d
+// -d <= arr1[i] - arr2[j] <= d
+// arr2[j] - d <= arr1[i] <= arr2[j] + d
 
 public class DisValueBtwTwoArrays {
 //    SOLUTION :
