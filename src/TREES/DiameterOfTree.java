@@ -2,6 +2,10 @@ package TREES;
 
 public class DiameterOfTree {
     public static int maxD = 0;
+    public int findMaxDiameter(Tree.Node root){
+        maxDiameter(root);
+        return maxD;
+    }
     public static int maxDiameter(Tree.Node root){
         if(root == null){
             return 0;
