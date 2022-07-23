@@ -1,25 +1,50 @@
 package GRAPHS;
 
+import java.util.Stack;
+
 public class Dfs extends Graph{
     boolean[] a;
     Dfs(int n) {
         super(n);
         a = new boolean[n+1];
     }
-    public void dfsTraversal(){
+    public void dfsRecurTraversal(){
         for(int i = 1; i <= n; i++){
-            dfs(i);
+            if(a[i] == false){
+                dfsRecur(i);
+            }
         }
     }
-
-    private void dfs(int x) {
-        if(a[x] == false){
+    public void dfsItTraversal(){
+        for(int i = 1; i <= n; i++){
+            if(a[i] == false){
+                dfsIt(i);
+            }
+        }
+    }
+    private void dfsIt(int x){
+        Stack<Integer> s = new Stack<>();
+        s.push(x);
+        while(!s.isEmpty()){
+            int i = s.pop();
+            a[i] = true;
+            System.out.print(i + " ");
+            for(int j : arr[x]){
+                if(a[j] == false){
+                    s.push(j);
+                    a[j] = true;
+                }
+            }
+        }
+    }
+    private void dfsRecur(int x) {
+//        if(a[x] == false){
             System.out.print(x + " ");
             a[x] = true;
-        }
+//        }
         for(int i : arr[x]){
             if(a[i] == false){
-                dfs(i);
+                dfsRecur(i);
             }
         }
     }
@@ -36,6 +61,6 @@ public class Dfs extends Graph{
         g.construct(4, 5);
         g.construct(6, 7);
         g.print();
-        g.dfsTraversal();
+        g.dfsRecurTraversal();
     }
 }
